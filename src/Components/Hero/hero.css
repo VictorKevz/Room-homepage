@@ -1,0 +1,133 @@
+.hero-wrapper{
+    position: relative;
+    width: 100%;
+    height: 534px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-img-side{
+    max-width: 840px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    
+}
+.hero-img{
+ width: 840px;   
+ height: 100%;
+ z-index: -1;
+}
+.hero-text-side{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    padding-left: 9.7rem;
+    padding-right: 1.3rem;
+    padding-top: 12rem;
+}
+.hero-title{
+font-size: 4.5rem;
+font-weight: 600;
+max-width: 390px;
+width: 100%;
+line-height: 1;
+color: black;
+letter-spacing: -.09;
+
+}
+.hero-description{
+    font-size: 1.56rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    color: var(--dark-gray);
+    line-height: 1.4;
+    max-width: 408px;
+    width: 100%;
+
+}
+.hero-link{
+    text-transform: uppercase;
+    letter-spacing: 1.407rem;
+    font-weight: 500;
+    margin-top: 2.56rem;
+    font-size: 1.42rem;
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    cursor: pointer;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+
+}
+.hero-link:hover{
+    color: var(--dark-gray);
+    transform: scale(1.05);
+    opacity: .9;
+
+}
+.arrow-icon{
+    margin-left: 1rem;
+    transform: scale(1);
+}
+.hero-link:hover ~ .arrow-icon{
+    transform: scale(1.5);
+}
+.buttons-container{
+    position: absolute;
+    bottom: 0;
+    right: -160px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+.btn{
+    border: none;
+    background-color: inherit;
+    z-index: 999;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+
+}
+.btn:hover{
+background-color: var(--very-dark-gray);
+}
+
+@media (width <= 1330px) {
+    .hero-text-side{
+        padding-right: 5rem;
+    }
+    .hero-img{
+        width: 100%;
+    }
+}
+@media (width <= 1180px) {
+    .hero-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .hero-text-side{
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 6.2rem;
+        padding-right: 2rem;
+        max-width: 100%;
+    }
+    
+    .buttons-container{
+        right: 0;
+    }
+    .hero-img-side{
+        /* margin: 0 auto; */
+        max-width: 100%;
+    }
+}
